@@ -1,8 +1,8 @@
 # Ignore all JSON files
-*.json
+
 aliases.json
 devices_cache.json
-
+aliases.json
 
 # Ignore environment variables
 .env
