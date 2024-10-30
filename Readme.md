@@ -202,7 +202,3 @@ This app is designed to demonstrate the basic usage of the Deako SDK, but you ca
 - **Monitor device state changes** in real-time using continuous updates from Deako devices.
 
 ---
-
-That's it! You've successfully set up the Deako Py App and can now control your Deako Lighting devices using Python.
-
-Feel free to reach out with any questions or if you encounter issues during setup.
