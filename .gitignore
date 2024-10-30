@@ -1,8 +1,8 @@
-./aliases.json
-./devices_cache.json
-
 # Ignore all JSON files
 *.json
+aliases.json
+devices_cache.json
+
 
 # Ignore environment variables
 .env
@@ -13,3 +13,5 @@ __pycache__/
 
 # Ignore log files
 *.log
+
+/venv/**
