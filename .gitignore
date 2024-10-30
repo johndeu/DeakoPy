@@ -1,0 +1,15 @@
+./aliases.json
+./devices_cache.json
+
+# Ignore all JSON files
+*.json
+
+# Ignore environment variables
+.env
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore log files
+*.log

@@ -49,7 +49,50 @@ lights alias list
 lights alias remove "shortname"
 ```
 
+## Install Deako CLI Script Globally
 
+If you'd like to run the `lights.py` command globally from anywhere on your system using the `lights` command, follow these steps:
+
+### Step 1: Create `lights.sh` Bash Script
+
+In your project folder, create a file called `lights.sh`. This script will automatically activate the virtual environment and run the `lights.py` script.
+
+```bash
+#!/bin/bash
+# Activate the virtual environment and run the lights.py script
+source /path/to/your/project/venv/bin/activate
+python /path/to/your/project/lights.py "$@"
+```
+
+### Step 2: Make lights.sh Executable
+
+Run the following command to make the lights.sh script executable:
+```bash
+chmod +x /path/to/your/project/lights.sh
+```
+
+### Step 3: Create a Symbolic Link
+
+Now, you’ll want to make the lights.sh script globally accessible. You can do this by creating a symbolic link to a folder that’s in your PATH. Commonly, this would be /usr/local/bin.
+```bash
+sudo ln -s /path/to/your/project/lights.sh /usr/local/bin/lights
+```
+This command creates a symbolic link named lights that points to the lights.sh script. You should now be able to run lights from anywhere in your terminal.
+
+### Step 4: Use the Script Globally
+Now, you can use the lights command globally to discover or control your Deako devices. For example:
+```bash
+lights discover
+lights on "coffee bar" --brightness 70
+lights off "coffee bar"
+```
+This will execute the lights.py Python script within the virtual environment using the lights command globally.
+
+Make sure your lights.py script is working correctly, and that you have installed all necessary dependencies inside your virtual environment using the steps provided earlier.
+
+You can also check if the virtual environment is being activated properly when running the script globally by echoing environment variables in lights.sh. If needed, adjust your script paths as necessary.
+
+That’s it! You can now control your Deako devices from anywhere in your terminal with a simple command.
 
 ## Dev Environment Setup
 
